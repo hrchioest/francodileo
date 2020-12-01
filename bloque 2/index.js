@@ -1,3 +1,5 @@
+/*BLOQUE II */
+
 /*Ejercicio 1: [BigThreeReloaded] Hacer una función a la cual le envie 3 enteros y retorne el mayor de ellos */
 
 const bigThreeReloaded = () => {
