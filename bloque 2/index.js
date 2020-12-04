@@ -94,11 +94,16 @@ const toArray = (string) => string.split("");
 
 /*Ejercicio 11: [AlCesarLoQueEsDelCesar] Implementar una función que pueda aplicar el cifrado del césar. (Googlear) */
 
-const AlCesarLoQueEsDelCesar = (codigo) =>{
-  let letras = [a,b,c,d,e,f,g,h,i,j,k,l,m,n,ñ,o,p,q,r,s,t,u,v,w,x,y,z]
-  let cifrado = [];
-  for(let i =0; i<codigo.length; i++){
-    if(codigo[i] )
-  }
-  
-}
+const alCesarLoQueEsDelCesarCifrando = (string) => {
+  const splitString = string.split("");
+  const codificando = splitString.map((item) => item.charCodeAt() + 3);
+  const cifrando = codificando.map((item) => String.fromCharCode(item));
+  return cifrando.join("");
+}; //krod
+
+const alCesarLoQueEsDelCesarDescifrando = (cifrado) => {
+  const splitString = cifrado.split("");
+  const codificando = splitString.map((item) => item.charCodeAt() - 3);
+  const descifrando = codificando.map((item) => String.fromCharCode(item));
+  return descifrando.join("");
+};
