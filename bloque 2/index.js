@@ -63,8 +63,42 @@ const filter = (vector1) => {
 /*Ejercicio 7: [NoLength] Crear una función que retorne la cantidad de caracteres de un texto.
 a. Nota: Esto es posible hacerlo dentro de javascript con .length. Implementar un ciclo para resolver el problema. */
 
-/*Ejercicio 8: [WalterWhite] Crear una función que retorne la cantidad de espacios en blanco de
-un texto */
+const noLength = (string) => {
+  let split = string.split("");
+  let contador = 0;
+  for (contador = 0; contador < split.length; contador++) {
+    contador = contador + 1;
+  }
+  return contador;
+};
 
-/*Ejercicio 9: [Capitalize] Crear una función que convierta un string “hola mundo” y retorne “Hola
-Mundo” */
+/*Ejercicio 8: [WalterWhite] Crear una función que retorne la cantidad de espacios en blanco de un texto */
+
+const walterWhite = (text) => text.split(" ").length - 1;
+
+/*Ejercicio 9: [Capitalize] Crear una función que convierta un string “hola mundo” y retorne “Hola Mundo” */
+
+const capitalize = (string) => {
+  let splitString = string.split(" ");
+  let vector = [];
+  for (let i = 0; i < splitString.length; i++) {
+    vector.push(
+      splitString[i].charAt(0).toUpperCase() + splitString[0].slice(1)
+    );
+  }
+  return vector.join(" ");
+};
+
+/*Ejercicio 10: [toArray] Crear una función que reciba un string y lo convierta en un array de caracteres.*/
+const toArray = (string) => string.split("");
+
+/*Ejercicio 11: [AlCesarLoQueEsDelCesar] Implementar una función que pueda aplicar el cifrado del césar. (Googlear) */
+
+const AlCesarLoQueEsDelCesar = (codigo) =>{
+  let letras = [a,b,c,d,e,f,g,h,i,j,k,l,m,n,ñ,o,p,q,r,s,t,u,v,w,x,y,z]
+  let cifrado = [];
+  for(let i =0; i<codigo.length; i++){
+    if(codigo[i] )
+  }
+  
+}
