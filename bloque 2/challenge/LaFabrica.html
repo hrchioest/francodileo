@@ -13,10 +13,20 @@
         const minSalary = 100;
         let salaries = [];
 
-        for (let i = 0; i < 5; i++) {
+        for (let i = 0; i <= 4; i++) {
             salaries[i] = Math.floor(Math.random() * (maxSalary - minSalary + 1)) + minSalary;
-            document.write(`El empleado número ${i + 1} recibe un sueldo de ${salaries[i]}. <br>`)
+            document.write(`El empleado número ${i + 1} recibe un sueldo de ${salaries[i]}. <br><br>`)
         }
+        const salariesMenor300 = salaries.filter(salary => salary < 300)
+        console.log("cant", salaries.length);
+        console.log("salaries", salaries);
+        console.log("sala<300", salariesMenor300)
+
+        document.write(`Son ${salariesMenor300.length} empleado(s) que ganan entre 100 y 300, y es(son) ${5 - salariesMenor300.length} empleado(s) que ganan más de 300 <br><br>`)
+
+        const salaryTotal = salaries.reduce((acum, currentValue) => acum + currentValue)
+
+        document.write(`El importe total del salario de los empleados fueron: ${salaryTotal}`)
 
     </script>
 </body>
