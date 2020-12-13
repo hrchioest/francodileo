@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Array - ejericio grupal</title>
+</head>
+
+<body>
+    <script>
+        const min = 1;
+        const max = 1000;
+        const vector = [];
+
+        for (let i = 0; i < 5; i++) {
+            vector[i] = Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        let ultimoElemento = vector.pop();
+        let penultimoElemento = vector.pop();
+
+        document.write(`Los dos últimos valores del vector son:<br> Último elemento: ${ultimoElemento} y penúltimo elemento: ${penultimoElemento}. <br>
+        La suma de los mismos son ${ultimoElemento + penultimoElemento}. <br>`)
+
+        document.write(`El tamaño final de nuestro vector inicial es de ${vector.length}.`)
+    </script>
+</body>
+
+</html>
