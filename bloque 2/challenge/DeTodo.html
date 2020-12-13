@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De Todo</title>
+</head>
+
+<body>
+    <script>
+        const number = parseInt(prompt("Ingrese un número para mostrarte la tabla de multiplicar"));
+
+        let array = []
+        let suma = 0;
+        for (let i = 1; i <= number; i++) {
+            const multiplication = number * i;
+            array.push(multiplication);
+            document.write(`${number} x ${i} = ${multiplication} <br><br>`)
+        }
+
+        for (let x = 0; x < array.length - 1; x++) {
+            document.write(`${array[x]} +`)
+            suma = suma + array[x]
+        }
+        document.write(`${array[array.length - 1]} = ${suma + array[array.length - 1]}`
+        );
+
+
+    </script>
+</body>
+
+</html>

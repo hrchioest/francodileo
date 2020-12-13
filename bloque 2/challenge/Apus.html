@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apus</title>
+</head>
+
+<body>
+    <script>
+        const name = prompt("Ingrese el nombre del producto");
+        const quantify = parseInt(prompt("Ingrese la cantidad"));
+        const price = parseInt(prompt("Ingrese el precio unitario del producto"));
+        const total = quantify * price;
+
+        document.write(
+            `Gracias por comprar ${quantify} productos de ${name}. Total abonar es de: ${total}`
+        );
+    </script>
+</body>
+
+</html>

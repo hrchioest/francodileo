@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Fábrica</title>
+</head>
+
+<body>
+    <script>
+        const maxSalary = 500;
+        const minSalary = 100;
+        let salaries = [];
+
+        for (let i = 0; i < 5; i++) {
+            salaries[i] = Math.floor(Math.random() * (maxSalary - minSalary + 1)) + minSalary;
+            document.write(`El empleado número ${i + 1} recibe un sueldo de ${salaries[i]}. <br>`)
+        }
+
+    </script>
+</body>
+
+</html>
