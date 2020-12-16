@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La clase</title>
+</head>
+
+<body>
+    <script>
+        let students = [];
+        let notes = [];
+        let requestStudents;
+        let requestNotes;
+        let studentHighNotes = [];
+        let studentLowNotes = [];
+
+        while (requestStudents != "") {
+            requestStudents = prompt("Ingrese nombre del alumno");
+            requestNotes = parseFloat(prompt("Ingrese su nota"));
+            if (requestStudents != "" && requestNotes != "") {
+                students.push(requestStudents);
+                notes.push(requestNotes);
+            }
+        }
+        document.write(`La cantidad de alumnos cargados es de: ${students.length}<br>`);
+
+        const approvedNotes = notes.filter(note => note >= 6);
+        document.write(`La cantidad de alumnos aprobados es: ${approvedNotes.length}<br>`)
+
+        const approvNotesTotal = approvedNotes.reduce((acum, currentV) => acum + currentV, 0);
+        let promAprovNotes = approvNotesTotal / approvedNotes.length;
+
+        const disapprovedNotes = notes.filter(note => note < 6);
+        const disapprovNotesTotal = disapprovedNotes.reduce((acum, currentV) => acum + currentV, 0);
+        let promDisapprovNotes = disapprovNotesTotal / disapprovedNotes.length
+
+        const promotedNotes = notes.filter(note => note === 10);
+        document.write(`La cantidad de alumnos promocionados es: ${promotedNotes.length}<br>`)
+
+        let highNotes = Math.max(...notes);
+        let lowNote = Math.min(...notes);
+
+
+        for (let i = 0; i < notes.length; i++) {
+            if (notes[i] === highNotes) {
+                studentHighNotes.push(students[i])
+            } else if (notes[i] === lowNote) {
+                studentLowNotes.push(students[i])
+            }
+        }
+        const ordenName = students.sort();
+        const notesPars = notes.filter(note => note % 2);
+
+        const logicaPromApprov = approvedNotes.length ? 'El promedio de la(s) nota(s) aprobadas es de: ' + promAprovNotes : 'No hay alumnos aprobados';
+        const logicaPromDisapprov = disapprovedNotes.length ? 'El promedio de la(s) nota(s) desaprobadas es de: ' + promDisapprovNotes : 'No hay alumnos desaprobados'
+
+        document.write(`El/Los alumno(s) que obtuvieron la mayor nota: ${highNotes}, fue/fueron: ${studentHighNotes} <br>`);
+        document.write(`El/Los alumno(s) que obtuvieron la menor nota: ${lowNote}, fue/fueron: ${studentLowNotes} <br>`);
+        document.write(`${logicaPromApprov} <br>`);
+        document.write(`${logicaPromDisapprov} <br>`);
+        document.write(`Orden alfabeticamente de nombres de los alumnos: ${ordenName} <br>`);
+        document.write(`La cantidad de notas pares son: ${notesPars.length}`);
+
+    </script>
+</body>
+
+</html>
