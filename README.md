@@ -8,3 +8,7 @@ Se estarán subiendo los challenge por bloques.
 - Bloque 1: Se realizan DDF (Diagramas de flujos) y algoritmos para solucionar los ejercicios dados.
 - Bloque 2: Se realizan funciones con ejercicios variados.
 
+### Proyecto
+##### Proyecto Photos_Api 
+- Se consume la api : https://unsplash.com/
+- Se usa estilos de la librería de bootstrap 
