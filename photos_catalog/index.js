@@ -1,6 +1,4 @@
-import keyId from "./clientId";
-
-let clientId = "";
+let clientId = "KLqjDPKbkXRTZ7Rez2diAJ3mD5w0_t6tGNi-jFmmVBc";
 const URL = `https://api.unsplash.com/photos/?page=1&client_id=${clientId}`;
 
 let photos = [];
@@ -28,16 +26,19 @@ const deletePhoto = (id) => {
 
 const createNode = ({ id, urls, alt_description }) => {
   const node = `
-  <div class="col-md-4 col-12"  id="${id}">
+  <div class="col-md-4 col-12 container-card" id="${id}">
     <div clas="card mt-5 ml-3">
-         <img src="${urls.regular}" class="card-img-top"/>
-         <div class="card-body">
+        <img class="photos" src="${urls.regular}" class="card-img-top"/>
+        <div class="card-body">
             <h5 class="card-title">${alt_description} </h5>
-            <button onClick =deletePhoto("${id}") class="btn btn-danger btn-block">Borrar</button>
+            <button class="button-delete" onClick =deletePhoto("${id}") class="btn btn-block btn-dark">
+              <img src="./img/trash-solid.svg" alt="trash"></button>
          </div>
        </div>
      </div>
+  </div>
 `;
+
   return node;
 };
 
