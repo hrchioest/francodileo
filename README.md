@@ -8,7 +8,7 @@ Se estarán subiendo los challenge por bloques.
 - Bloque 1: Se realizan DDF (Diagramas de flujos) y algoritmos para solucionar los ejercicios dados.
 - Bloque 2: Se realizan funciones con ejercicios variados.
 
-### Proyecto Photos_Catalog
+### Proyecto: Photos_Catalog
 
 - Se desarrolló en HTML, Bootstrap / Sass y Js vanilla
 - Se consume la api : https://unsplash.com/
