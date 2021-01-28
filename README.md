@@ -8,7 +8,12 @@ Se estarán subiendo los challenge por bloques.
 - Bloque 1: Se realizan DDF (Diagramas de flujos) y algoritmos para solucionar los ejercicios dados.
 - Bloque 2: Se realizan funciones con ejercicios variados.
 
-### Proyecto
-##### Proyecto Photos_Api 
+### Proyecto Photos_Catalog
+
+- Se desarrolló en HTML, Bootstrap / Sass y Js vanilla
 - Se consume la api : https://unsplash.com/
-- Se usa estilos de la librería de bootstrap 
+- Las funcionalidades que tiene el proyecto es que carga las fotos que tiene la api, se puede buscar por tipo de photos y se puede eliminar las card para selecionar las que más les gusta.
+
+![Screenshot del proyecto](https://user-images.githubusercontent.com/53129859/106147194-55d47200-6156-11eb-84de-aef867be68bc.png)
+
+**Ver online**: https://hrchioest.github.io/francodileo/
