@@ -4,7 +4,6 @@ body {
 
 .photos {
   width: 420px;
-  height: 450px;
 }
 @media (max-width: 767px) {
   .photos {
