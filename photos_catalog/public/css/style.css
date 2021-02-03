@@ -5,6 +5,7 @@ body {
 .photos {
   width: 361px;
   height: 450px;
+  object-fit: cover;
 }
 @media (max-width: 767px) {
   .photos {
@@ -35,7 +36,7 @@ nav {
 }
 
 .photos:hover {
-  transform: scale(1.1);
+  transform: scale(1);
 }
 
 .carousel-item {
